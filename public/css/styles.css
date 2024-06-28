@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    background-color: #ebebeb;
+}
+
+.box-flex-logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.box-box-logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 40%;
+}
+
+header.navbar {
+    background-color: #EAC926;
+    font-size: 12px;
+    padding-bottom: 1.5%;  
+}
+
+.parrafo {
+    text-align: center;
+    margin: 15px;
+}
+
+.search-bar{
+    width: 40%;
+}
+
+
+input {
+    border-radius: 3px;
+    width: 80%;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.fa-magnifying-glass{
+    padding: 5px;
+    background-color: white;
+    margin-left: -4px;
+}
+
+a {
+    text-decoration: none; 
+}
+
+.login-bar, .list {
+    list-style-type: none;
+    display: none;
+}
+
+.burger-menu {
+    background-color:#1259c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45%;
+    border-radius: 15%;
+    width: 25px;
+    height: 25px;
+    color: white;
+    padding: 0.7%;
+}
+
+.title {
+    font-size: 24px;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 7%;
+}
+
+.precios {
+    font-size: 18px;
+    padding-top: 5px;
+    width: 30%;
+}
+
+.desc {
+    font-size: 16px;
+    color: #39b54a;
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 70%;
+}
+
+.descripcion {
+    font-size: 16px;
+    padding-top: 15px;
+    font-weight: 500;
+    color: #666;
+    display: none;
+}
+
+.centrado {
+    text-align: center;
+    margin: 15%;
+}
+
+main {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+input[type="password"],
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.modificar {
+    margin: 10px;
+
+}
+
+img {
+    width: 100%;
+}
+
+.box-linea {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: baseline;
+}
+
+.info {
+    display: block;
+    border-top: solid 1px #ebebeb;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+}
+
+.fa-truck {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    color: #39b54a;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+footer h4 {
+    color: #666;
+    margin-bottom: 2%;
+}
+
+footer i {
+    font-size: 2em;
+    margin-top: 10px;
+    color: #1259c3;
+}
+
+
+footer section p {
+    font-size: 14px;
+}
+
+
+/* MEDIAS QUERIES*/
+
+
+@media (min-width: 481px) {
+    .box-box-logo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 60%;
+    }
+
+    .modificar {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 45%;
+    }
+    .descripcion{
+        display: block;
+    }
+    .login-bar, .list {
+        display: block;
+        margin-left: 15px;
+    }
+    .burger-menu {
+        display: none;
+    }
+    .box-flex{
+        display: flex;  
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .navegador{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .box-nav{
+        display: flex;
+        width: 50%;
+    }
+    .box-navv{
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    .list, .login-bar{
+        display: flex;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .modificar {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 20%;
+    }
+
+    .descripcion{
+        display: block;
+    }
+    .login-bar, .list {
+        display: block;
+        margin-left: 15px;
+    }
+    .burger-menu {
+        display: none;
+    }
+    .box-flex{
+        display: flex;  
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box-linea {
+    align-items: baseline;
+    }
+
+    .navegador{
+        display: flex;
+        flex-wrap:initial;
+    }
+    .box-nav{
+        display: flex;
+        width: 50%;
+    }
+    .box-navv{
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
+    }
+    .list, .login-bar{
+        display: flex;
+    }
+}
