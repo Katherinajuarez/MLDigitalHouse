@@ -9,24 +9,47 @@
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    font-style: italic;
     background-color: #ebebeb;
 }
 
 .box-flex-logo{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-}
-.box-box-logo{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .logo{
+    width: 60%;
+    padding: 20px;
+}
+
+.search-bar{
+    width: 100%;
+}
+
+div.box-search-bar {
     width: 40%;
 }
+
+.box-search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.box-parrafo{
+    font-size: 16px;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.paragraph {
+    margin: 5px;
+}
+
 
 header.navbar {
     background-color: #EAC926;
@@ -34,28 +57,36 @@ header.navbar {
     padding-bottom: 1.5%;  
 }
 
-.parrafo {
-    text-align: center;
-    margin: 15px;
-}
 
-.search-bar{
-    width: 40%;
-}
-
-
-input {
-    border-radius: 3px;
-    width: 80%;
+#search{
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
     height: 30px;
     margin-top: 10px;
+    border: white;
+    outline: 0;
 }
 
-.fa-magnifying-glass{
-    padding: 5px;
-    background-color: white;
-    margin-left: -4px;
+#search:focus{
+    border-style: solid;
+    border-color: #3483fa;
+    border-width: 1.7px;
 }
+
+.button-search{
+    font-size: 18px;
+    padding: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border: none;
+    top: 13px;
+    right: 7px;
+    border-radius: 4px;
+    color: rgba(102, 102, 102, 0.488);
+}
+
 
 a {
     text-decoration: none; 
@@ -88,7 +119,7 @@ a {
     margin-left: 7%;
 }
 
-.precios {
+.prices { 
     font-size: 18px;
     padding-top: 5px;
     width: 30%;
@@ -102,7 +133,7 @@ a {
     width: 70%;
 }
 
-.descripcion {
+.description {
     font-size: 16px;
     padding-top: 15px;
     font-weight: 500;
@@ -110,9 +141,9 @@ a {
     display: none;
 }
 
-.centrado {
+.footer-centered {
     text-align: center;
-    margin: 15%;
+    margin: 10px;
 }
 
 main {
@@ -120,40 +151,9 @@ main {
     width: 90%;
 }
 
-.container {
-    width: 50%;
-    margin: 50px auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-    color: #333;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="date"],
-input[type="file"],
-input[type="password"],
-select {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-
-.modificar {
+.products {
     margin: 10px;
-
 }
 
 img {
@@ -188,48 +188,232 @@ img {
     position: absolute;
     right: 20px;
     top: -15px;
+    transition: transform 700ms;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
+.fa-truck:hover{
+    cursor: pointer;
+    transform: rotate(-90deg);
 }
+
 
 footer h4 {
     color: #666;
-    margin-bottom: 2%;
 }
 
 footer i {
     font-size: 2em;
     margin-top: 10px;
     color: #1259c3;
+    margin-bottom: 5px;
 }
 
-
-footer section p {
+.copyright {
     font-size: 14px;
 }
 
+.contenedor-login{
+    text-align: center;
+    margin: 0 auto;
+    width: 85%;
+    background: #ffffff96;
+    padding: 15px;
+    margin-top: 25px;
+    border-radius: 10px;
+}  
 
-/* MEDIAS QUERIES*/
+.form-login{
+    width: 80%;   
+    margin: 0 auto;
+}
+
+.input-user, .input-password{
+    border-radius: 3px;
+    height: 40px;
+    margin-top: 30px;
+    border: none;
+}
+
+.fa-user, .fa-lock{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.input-user::placeholder, .input-password::placeholder{
+    padding: 8px;
+}
+
+.send-login{
+    color: rgb(11, 11, 11);
+    width: 80%;
+    background-color: #dcdcdc;
+    height: 40px;
+    margin-top: 25px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+}
+
+.send-login:hover{
+    background-color: #0022AA;
+    color: white;
+    transition-duration: 0.8s;
+}
+
+.footer-login{
+    background-color: #ebebeb;
+}
+
+.span-error-user{
+    display: block;
+    font-style: italic;
+    display: none;
+}
+
+:invalid .span-error-user {
+    display: block;
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.span-error-password{
+    display: block;
+    font-style: italic;
+    display: none;
+}
+
+:invalid .span-error-password   {
+    display: block;
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.input-user:valid{
+    border: 1px solid rgba(0, 255, 13, 0.532);
+}
+
+.input-user:invalid{
+    border: 1px solid rgba(255, 0, 0, 0.532);
+}
+
+.input-password:valid{
+    border: 1px solid rgba(0, 255, 13, 0.532);
+}
+
+.input-password:invalid{
+    border: 1px solid rgba(255, 0, 0, 0.532);
+}
+
+.input-register, .input-user, .input-password:focus{ 
+    outline: none; 
+} 
+
+
+.container-register {
+    max-width: 600px;
+    margin: 0 auto;
+    background:  #ffffff96;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 35px;
+}
+.title-register {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 500;
+}
+.registerForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-register {
+    margin-top: 10px;
+    font-weight: 500;
+    display: block;
+}
+input[type="text"], input[type="email"], input[type="date"], input[type="password"], textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+input[type="file"] {
+    margin-top: 10px;
+}
+.checkbox-group-register, .radio-group-register {
+    margin-top: 10px;
+}
+.checkbox-group-register label, .radio-group-register label {
+    margin-right: 10px;
+}
+.actions-register {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.actions-register button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.actions-register .submit-btn {
+    background-color: #28a745;
+    color: white;
+}
+.actions-register .reset-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.span-error-register{
+    display: block;
+    font-style: italic;
+    display: none;
+}
+
+:invalid ~ .span-error-register {
+    display: block;
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px;
+}
+
+
+/*media query*/
 
 
 @media (min-width: 481px) {
-    .box-box-logo{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 60%;
+
+    .products {
+        width: 45%;
     }
 
-    .modificar {
+    .products:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 45%;
     }
-    .descripcion{
+    
+    .description{
         display: block;
+        color: #ffffff;
     }
+
+    article:hover .description{
+        display: block;
+        color: #666;
+    }
+    
     .login-bar, .list {
         display: block;
         margin-left: 15px;
@@ -266,18 +450,40 @@ footer section p {
     .list, .login-bar{
         display: flex;
     }
+
+    .box-parrafo{
+        font-size: 16px;
+        text-align: center;
+        padding-right: 20px;
+        width: 30%
+    }
+
+    .contenedor-login{
+        width: 65%;
+    }
 }
 
 
 @media (min-width: 769px) {
-    .modificar {
+    .products {
+        width: 20%;
+    }
+
+    .products:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 20%;
     }
 
-    .descripcion{
+    .description{
         display: block;
+        color: #ffffff;
     }
+
+    .description:hover{
+        display: block;
+        color: #666;
+    }
+
     .login-bar, .list {
         display: block;
         margin-left: 15px;
@@ -296,7 +502,7 @@ footer section p {
 
     .navegador{
         display: flex;
-        flex-wrap:initial;
+        flex-wrap: wrap;
     }
     .box-nav{
         display: flex;
@@ -309,5 +515,44 @@ footer section p {
     }
     .list, .login-bar{
         display: flex;
+    }
+
+    .box-parrafo{
+        font-size: 16px;
+        text-align: center;
+        padding-right: 20px;
+        width: 30%
+    }
+
+    .footer-centered{
+        width: 28%;
+    }
+    
+    .parrafo-size{
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .footer-login{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 125px;
+    }
+
+    p.copyright {
+        display: block;
+        width: 50%;
+        margin-bottom: 4px;
+        margin-left: 4px;
+        margin-top: 5px;
+    }
+
+    .icons-colours:hover{
+        color: #03264C;
+    }
+
+    .contenedor-login{
+        width: 35%;
     }
 }
