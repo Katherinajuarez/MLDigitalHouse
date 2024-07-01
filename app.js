@@ -7,15 +7,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/home.html'));
+    res.sendFile(path.join(__dirname, 'views/home'));
   });
 
   app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/register.html'));
+    res.sendFile(path.join(__dirname, 'views/register'));
   });
 
   app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/login.html'));
+    res.sendFile(path.join(__dirname, 'views/login'));
   });
 
 const port = process.env.PORT || 3000;
