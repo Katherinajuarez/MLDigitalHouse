@@ -7,18 +7,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/home'));
+    res.sendFile(path.join(__dirname, 'views/home.html'));
   });
 
-  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/register'));
+  app.get('/register.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views/register.html'));
   });
 
-  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/login'));
+  app.get('/login.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views/login.html'));
   });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3030;
 app.listen(port, () => console.log(`Servidor corriendo con éxito en puerto ${port}`));
 
 
